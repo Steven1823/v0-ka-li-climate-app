@@ -1,0 +1,40 @@
+{
+  "name": "kali-pwa",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Climate Intelligence System for Kenyan Farmers - Progressive Web App",
+  "author": "KaLI Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/node": "24.10.1",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "postcss": "8.5.6"
+  },
+  "keywords": [
+    "pwa",
+    "agriculture",
+    "climate",
+    "kenya",
+    "farmers",
+    "offline-first"
+  ],
+  "dependencies": {
+    "next": "16.0.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.555.0",
+    "tailwind-merge": "3.4.0",
+    "tailwindcss-animate": "1.0.7"
+  }
+}

@@ -1,0 +1,229 @@
+/* Cooperative Portal Styles */
+
+.coop-header {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.coop-header h1 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: 24px;
+}
+
+.coop-header__toggle {
+  flex-shrink: 0;
+}
+
+.coop-main {
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.coop-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin: var(--spacing-sm) 0 0 0;
+}
+
+.coop-alerts-section,
+.coop-actions-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.coop-alerts-section h2,
+.coop-actions-section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.coop-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.risk-map {
+  width: 100%;
+}
+
+.risk-map svg {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* Extension Kit Styles */
+
+.extension-header {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.extension-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.online-status {
+  margin-top: var(--spacing-sm);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge--online {
+  background-color: rgba(56, 142, 60, 0.3);
+  color: white;
+}
+
+.status-badge--offline {
+  background-color: rgba(255, 152, 0, 0.3);
+  color: white;
+}
+
+.extension-header__toggle {
+  flex-shrink: 0;
+}
+
+.extension-main {
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.extension-actions-section,
+.extension-sync-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.extension-actions-section h2,
+.extension-sync-section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.extension-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.pending-list {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.pending-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pending-item:last-child {
+  border-bottom: none;
+}
+
+.pending-item__info {
+  flex: 1;
+}
+
+.pending-item__type {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.pending-item__time {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.pending-item__delete {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.pending-item__delete:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #d32f2f;
+}
+
+.disease-symptoms {
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.disease-symptoms h4 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.disease-symptoms ul {
+  line-height: 1.8;
+}
+
+@media (max-width: 599px) {
+  .extension-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coop-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}

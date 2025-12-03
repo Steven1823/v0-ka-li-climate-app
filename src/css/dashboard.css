@@ -1,0 +1,445 @@
+/* Farmer Dashboard Styles - Simplified */
+
+.dashboard-header {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard-header__content {
+  flex: 1;
+}
+
+.dashboard-greeting {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-sm) 0;
+  line-height: 1.3;
+}
+
+.dashboard-location {
+  font-size: 14px;
+  opacity: 0.95;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.dashboard-location strong {
+  font-weight: 600;
+}
+
+.dashboard-header__toggle {
+  flex-shrink: 0;
+}
+
+.dashboard-main {
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dashboard-main h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Alert Section */
+.dashboard-alert-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-alert-section h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Weather Section */
+.dashboard-weather-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.weather-snapshot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.weather-snapshot__today {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.weather-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.weather-info {
+  flex: 1;
+}
+
+.weather-temp {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.weather-condition {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.weather-snapshot__forecast {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+}
+
+.forecast-bars {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: space-around;
+}
+
+.forecast-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-align: center;
+}
+
+.forecast-bar__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.forecast-bar__chart {
+  width: 40px;
+  height: 80px;
+  background-color: rgba(46, 125, 50, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.forecast-bar__rain {
+  width: 100%;
+  background: linear-gradient(180deg, #ff9800, #f57c00);
+  border-radius: var(--radius-sm);
+  transition: height 0.3s ease;
+}
+
+.forecast-bar__temp {
+  font-size: 12px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Quick Actions - Simplified to 3 buttons */
+.dashboard-quick-actions-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Learning cards section with expandable toggle */
+.dashboard-learning-section {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.learning-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 600px) {
+  .learning-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.learning-card {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.learning-card h4 {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.learning-card p {
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  animation: modalFadeIn 0.2s ease;
+}
+
+.modal--hidden {
+  display: none;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.modal__content {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1;
+  animation: modalSlideUp 0.3s ease;
+}
+
+.modal__header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.modal__close:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-primary);
+}
+
+.modal__body {
+  padding: var(--spacing-md);
+}
+
+.tts-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Simple Modal */
+.simple-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.simple-modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.simple-modal__box {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  width: 100%;
+  animation: modalSlideUp 0.3s ease;
+}
+
+.simple-modal__header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simple-modal__header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+.simple-modal__close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.simple-modal__close:hover {
+  color: var(--color-primary);
+}
+
+.simple-modal__content {
+  padding: var(--spacing-md);
+}
+
+/* Market Prices Grid */
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.price-card {
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.price-card h4 {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-primary);
+}
+
+.price-card .price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-card .change {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+/* Help Options */
+.help-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 599px) {
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .dashboard-greeting {
+    font-size: 20px;
+  }
+
+  .forecast-bar__chart {
+    width: 35px;
+    height: 70px;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}

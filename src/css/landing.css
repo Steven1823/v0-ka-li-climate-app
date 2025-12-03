@@ -1,0 +1,68 @@
+/* Landing Page Styles - Simplified */
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.landing-header {
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.landing-header__toggle {
+  flex-shrink: 0;
+}
+
+.landing-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* Hero Section */
+.landing-hero {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.landing-logo {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.landing-tagline {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+}
+
+.landing-button {
+  min-height: 44px;
+}
+
+/* Mobile responsive */
+@media (max-width: 599px) {
+  .landing-logo {
+    font-size: 48px;
+  }
+
+  .landing-tagline {
+    font-size: 18px;
+  }
+
+  .landing-main {
+    padding: var(--spacing-md);
+  }
+}
